@@ -703,7 +703,7 @@
                     ],
                     "UninstallCommands": 
                     [
-                        "ASADMIN wmic product where \"name like 'Java%%'\" call uninstall",
+                        "wmic product where \"name like 'Java%%'\" call uninstall",
                         "rmdir /Q /S ${InstallDir}"
                     ],
                     "PostInstallMessage" : "Please set JAVA_HOME System Environment Varable to ${InstallDir}"
