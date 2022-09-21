@@ -698,7 +698,7 @@
                     "InstallCommands"    :
                     [
                         "ADO_DOWNLOAD",
-                        "${InstallDir}\\jdk-8u311-windows-${HOST-ARCH}.exe /s ADDLOCAL=ToolsFeature INSTALLDIR=${TWHome}\\Tools\\Java",
+                        "${InstallDir}\\jdk-11.0.16_windows-${HOST-ARCH}.exe /s ADDLOCAL=ToolsFeature INSTALLDIR=${TWHome}\\Tools\\Java",
                         "del /f ${InstallDir}\\jdk-8u311-windows-${HOST-ARCH}.exe"
                     ],
                     "UninstallCommands": 
