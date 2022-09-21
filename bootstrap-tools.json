@@ -775,7 +775,7 @@
                     "InstallDoc": "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDK",
                     "InstallDir": "${TWHome}\\Tools\\Android\\SDK\\build-tools\\${VERSION}",
                     "Installcommands": [
-                        "rmdir /S /Q ${TWHome}\\Tools\\Android\\SDK\\build-tools\\*",
+                        "rmdir /S /Q ${TWHome}\\Tools\\Android\\SDK\\build-tools\\",
                         "start \"Android SDK Installer\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat \"platforms;android-33\" \"build-tools;33.0.0\" \"system-images;android-33;google_apis;x86_64\"",
                         "start \"Android SDK Updates\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --update",
                         "start \"Android SDK Licenses - Please accept all\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --licenses"
