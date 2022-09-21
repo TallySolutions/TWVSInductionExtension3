@@ -757,7 +757,7 @@
                 "VersionInfo": {
                     "Command": "type ${InstallDir}\\source.properties",
                     "OutputType": "PlainText",
-                    "Line": 1,
+                    "Line": 2,
                     "Column": 1,
                     "Prefix": "Pkg.Revision="
                 },
