@@ -703,7 +703,7 @@
                     ],
                     "UninstallCommands": 
                     [
-                        "ASADMIN wmic product where \"name like 'Java%%'\" call uninstall",
+                        "wmic product where \"name like 'Java%%'\" call uninstall",
                         "rmdir /Q /S ${InstallDir}"
                     ],
                     "PostInstallMessage" : "Please set JAVA_HOME System Environment Varable to ${InstallDir}"
@@ -711,30 +711,30 @@
             }
         },
         {
-            "Name"        : "AndroidSDK",
-            "Windows"     :
-            {
-                "VersionString"  : "6.0",
-                "VersionInfo"    : 
-                {
-                    "Command"    : "type ${InstallDir}\\cmdline-tools\\latest\\source.properties",
-                    "OutputType" : "PlainText",
-                    "Line"       : 1,
-                    "Column"     : 1,
-                    "Prefix"     : "Pkg.Revision="
+            "Name": "AndroidSDK_CMDLineTool",
+            "Windows": {
+                "VersionString": "6.0",
+                "VersionInfo": {
+                    "Command": "type ${InstallDir}\\cmdline-tools\\latest\\source.properties",
+                    "OutputType": "PlainText",
+                    "Line": 1,
+                    "Column": 1,
+                    "Prefix": "Pkg.Revision="
                 },
-                "Installer" : 
-                { 
-                    "EnvVars"    : [{"Name" : "JAVA_HOME", "Value" : "${TWHome}\\Tools\\Java"}],
-                    "URL": 
-                    {
-                        "X64"  :  "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip",
-                        "ARM64":  "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip"
+                "Installer": {
+                    "EnvVars": [
+                        {
+                            "Name": "JAVA_HOME",
+                            "Value": "${TWHome}\\Tools\\Java"
+                        }
+                    ],
+                    "URL": {
+                        "X64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip",
+                        "ARM64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip"
                     },
-                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDK",
-                    "InstallDir"      : "${TWHome}\\Tools\\Android\\SDK",
-                    "Installcommands"    :
-                    [
+                    "InstallDoc": "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDK",
+                    "InstallDir": "${TWHome}\\Tools\\Android\\SDK",
+                    "Installcommands": [
                         "DOWNLOAD ${URL_0} ${TEMPDIR}\\commandlinetools-win-8092744_latest.zip",
                         "UNZIP ${TEMPDIR}\\commandlinetools-win-8092744_latest.zip",
                         "DEL /F ${TEMPDIR}\\commandlinetools-win-8092744_latest.zip",
@@ -742,13 +742,45 @@
                         "move ${InstallDir}\\cmdline-tools\\bin ${InstallDir}\\cmdline-tools\\latest\\bin",
                         "move ${InstallDir}\\cmdline-tools\\lib ${InstallDir}\\cmdline-tools\\latest\\lib",
                         "move ${InstallDir}\\cmdline-tools\\NOTICE.txt ${InstallDir}\\cmdline-tools\\latest\\NOTICE.txt",
-                        "move ${InstallDir}\\cmdline-tools\\source.properties ${InstallDir}\\cmdline-tools\\latest\\source.properties",
-                        "start \"Android SDK Installer\" cmd /c ${InstallDir}\\cmdline-tools\\latest\\bin\\sdkmanager.bat \"platforms;android-30\" \"build-tools;30.0.3\" \"system-images;android-30;google_apis;x86_64\"",
-                        "start \"Android SDK Updates\" cmd /c ${InstallDir}\\cmdline-tools\\latest\\bin\\sdkmanager.bat --update",
-                        "start \"Android SDK Licenses - Please accept all\" cmd /c ${InstallDir}\\cmdline-tools\\latest\\bin\\sdkmanager.bat --licenses"
+                        "move ${InstallDir}\\cmdline-tools\\source.properties ${InstallDir}\\cmdline-tools\\latest\\source.properties"
                     ],
-                    "UninstallCommands":
-                    [
+                    "UninstallCommands": [
+                        "rmdir /S /Q ${InstallDir}"
+                    ]
+                }
+            }
+        },
+        {
+            "Name": "AndroidSDK_BuildTools",
+            "Windows": {
+                "VersionString": "32.0.0",
+                "VersionInfo": {
+                    "Command": "type ${InstallDir}\\source.properties",
+                    "OutputType": "PlainText",
+                    "Line": 2,
+                    "Column": 1,
+                    "Prefix": "Pkg.Revision="
+                },
+                "Installer": {
+                    "EnvVars": [
+                        {
+                            "Name": "JAVA_HOME",
+                            "Value": "${TWHome}\\Tools\\Java"
+                        }
+                    ],
+                    "URL": {
+                        "X64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip",
+                        "ARM64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip"
+                    },
+                    "InstallDoc": "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDK",
+                    "InstallDir": "${TWHome}\\Tools\\Android\\SDK\\build-tools\\${VERSION}",
+                    "Installcommands": [
+                        "rmdir /S /Q ${TWHome}\\Tools\\Android\\SDK\\build-tools\\",
+                        "start \"Android SDK Installer\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat \"platforms;android-32\" \"build-tools;32.0.0\" \"system-images;android-32;google_apis;x86_64\"",
+                        "start \"Android SDK Updates\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --update",
+                        "start \"Android SDK Licenses - Please accept all\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --licenses"
+                    ],
+                    "UninstallCommands": [
                         "rmdir /S /Q ${InstallDir}"
                     ]
                 }
@@ -963,7 +995,7 @@
             "Name"        : "Gradle",
             "Windows"     :
             {
-                "VersionString"  : "7.1",
+                "VersionString"  : "7.2",
                 "Artifactory" : 
                 {
                         "Name"         : "ADOService",
