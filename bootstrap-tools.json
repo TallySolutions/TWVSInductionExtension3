@@ -779,9 +779,6 @@
                         "start \"Android SDK Installer\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat \"platforms;android-32\" \"build-tools;32.0.0\" \"system-images;android-32;google_apis;x86_64\"",
                         "start \"Android SDK Updates\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --update",
                         "start \"Android SDK Licenses - Please accept all\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --licenses"
-                    ],
-                    "UninstallCommands": [
-                        "rmdir /S /Q ${InstallDir}"
                     ]
                 }
             }
