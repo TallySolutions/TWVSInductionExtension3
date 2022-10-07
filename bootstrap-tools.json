@@ -732,7 +732,7 @@
                         "X64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip",
                         "ARM64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip"
                     },
-                    "InstallDoc": "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDK",
+                    "InstallDoc": "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDKCommandLineTools",
                     "InstallDir": "${TWHome}\\Tools\\Android\\SDK",
                     "Installcommands": [
                         "DOWNLOAD ${URL_0} ${TEMPDIR}\\commandlinetools-win-8092744_latest.zip",
@@ -772,7 +772,7 @@
                         "X64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip",
                         "ARM64": "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip"
                     },
-                    "InstallDoc": "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDK",
+                    "InstallDoc": "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidSDKBuildTools",
                     "InstallDir": "${TWHome}\\Tools\\Android\\SDK\\build-tools\\${VERSION}",
                     "Installcommands": [
                         "rmdir /S /Q ${TWHome}\\Tools\\Android\\SDK\\build-tools\\",
