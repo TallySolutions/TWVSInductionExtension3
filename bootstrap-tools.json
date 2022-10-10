@@ -1301,6 +1301,202 @@
                 }
             }
         },
+     {
+            "Name"        : "RefexLib",
+            "Windows"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Windows-Build-Libs",
+                        "Package"      : "reflexlib3.2.11"
+                },
+                "VersionInfo"    : 
+                {
+                    "Command"    : "type ${InstallDir}\\reflexlib.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+		},
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallReflexLib",
+                    "InstallDir"      : "${TWHome}\\Tools\\ReflexLib",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "rmdir /S /Q ${InstallDir}"
+                    ]
+                }
+            },
+	    "Linux"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Linux-Build-Libs",
+                        "Package"      : "reflexlib3.2.11"
+                },
+                "VersionInfo"    : 
+                {	    
+                    "Command"    : "cat /usr/share/ReflexLib/reflexlib.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+		},
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Linux+x64+Host#InstallRequiredSoftwareonLinuxx64Host-InstallReflexLib",
+                    "InstallDir"      : "/usr/share/ReflexLib",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD",
+                        "sudo chmod -R 755 /usr/share/ReflexLib/Linux"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "sudo rm -rf ${InstallDir}"
+                    ]
+                }
+            },
+	    "MacOS"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "MacOS-Build-Libs",
+                        "Package"      : "reflexlib3.2.11"
+                },
+                "VersionInfo"    : 
+                {
+                    "Command"    : "cat /Users/Shared/ReflexLib/reflexlib.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+		},
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+MacOS+x64+and+ARM64+Host#InstallRequiredSoftwareonMacOSx64andARM64Host-InstallReflexLib",
+                    "InstallDir"      : "/Users/Shared/ReflexLib",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD",
+                        "sudo chmod -R 755 /Users/Shared/ReflexLib/Apple"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "sudo rm -rf ${InstallDir}"
+                    ]
+                }
+            }
+        },
+     {
+            "Name"        : "Reflex",
+            "Windows"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Windows-Build-Libs",
+                        "Package"      : "reflex3.2.11"
+                },
+                "VersionInfo"    : 
+                {
+                    "Command"    : "type ${InstallDir}\\reflex.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+		},
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallReflex",
+                    "InstallDir"      : "${TWHome}\\Tools\\Reflex",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "rmdir /S /Q ${InstallDir}"
+                    ]
+                }
+            },
+	    "Linux"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Linux-Build-Libs",
+                        "Package"      : "reflex3.2.11"
+                },
+                "VersionInfo"    : 
+                {	    
+                    "Command"    : "cat /usr/share/Reflex/reflex.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+		},
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Linux+x64+Host#InstallRequiredSoftwareonLinuxx64Host-InstallReflex",
+                    "InstallDir"      : "/usr/share/Reflex",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD",
+                        "sudo chmod -R 755 /usr/share/Reflex"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "sudo rm -rf ${InstallDir}"
+                    ]
+                }
+            },
+	    "MacOS"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "MacOS-Build-Libs",
+                        "Package"      : "reflex3.2.11"
+                },
+                "VersionInfo"    : 
+                {
+                    "Command"    : "cat /Users/Shared/Reflex/reflex.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+		},
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+MacOS+x64+and+ARM64+Host#InstallRequiredSoftwareonMacOSx64andARM64Host-InstallReflex",
+                    "InstallDir"      : "/Users/Shared/Reflex",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD",
+                        "sudo chmod -R 755 /Users/Shared/Reflex"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "sudo rm -rf ${InstallDir}"
+                    ]
+                }
+            }
+        },
         {
             "Name"        : "DoxyGen",
             "Windows"     :
