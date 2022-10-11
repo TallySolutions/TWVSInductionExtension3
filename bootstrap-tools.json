@@ -948,7 +948,7 @@
                 },
                 "VersionInfo" : 
                 {
-                    "Command"    : "bison --version",
+                    "Command"    : "/usr/bin/bison --version",
                     "OutputType" : "PlainText",
                     "Prefix"     : "v",
                     "Line"       : 1,
