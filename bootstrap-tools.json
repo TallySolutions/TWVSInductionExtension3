@@ -961,6 +961,7 @@
                     "InstallCommands" :
                     [
                         "ADO_DOWNLOAD",
+			"sudo chmod 775 ${InstallDir}/bison"
 			"sudo ln -sf ${InstallDir}/bison /usr/bin/bison"
                     ],
                     "UninstallCommands":
