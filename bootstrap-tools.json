@@ -938,7 +938,6 @@
             },
             "Linux"     :
             {
-               "VersionType" : "ArtifactoryLatest",
                 "Artifactory" : 
                 {
                         "Name"         : "ADOService",
@@ -946,6 +945,7 @@
                         "Feed"         : "Linux-${HOST-ARCH}-BuildTools",
                         "Package"      : "bisontest"
                 },
+		"VersionString"  : "3.8.2",
                 "VersionInfo" : 
                 {
                     "Command"    : "/usr/bin/bison --version",
