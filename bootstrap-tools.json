@@ -1408,7 +1408,7 @@
                 {
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
-                        "Feed"         : "Windows-Build-Libs",
+                        "Feed"         : "Windows-x64-BuildTools",
                         "Package"      : "reflex3.2.11"
                 },
                 "VersionInfo"    : 
@@ -1439,7 +1439,7 @@
                 {
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
-                        "Feed"         : "Linux-Build-Libs",
+                        "Feed"         : "Linux-x64-BuildTools",
                         "Package"      : "reflex3.2.11"
                 },
                 "VersionInfo"    : 
@@ -1471,7 +1471,7 @@
                 {
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
-                        "Feed"         : "MacOS-Build-Libs",
+                        "Feed"         : "MacOS-x64-BuildTools",
                         "Package"      : "reflex3.2.11"
                 },
                 "VersionInfo"    : 
