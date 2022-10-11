@@ -943,7 +943,7 @@
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
                         "Feed"         : "Linux-${HOST-ARCH}-BuildTools",
-                        "Package"      : "bisontest"
+                        "Package"      : "bison"
                 },
 		"VersionString"  : "3.8.2",
                 "VersionInfo" : 
