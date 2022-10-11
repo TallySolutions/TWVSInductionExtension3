@@ -957,10 +957,11 @@
                 "Installer" : 
                 { 
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallBison",
-                    "InstallDir"      : "/usr/local/bin",
+                    "InstallDir"      : "/usr/share/Bison",
                     "InstallCommands" :
                     [
-                        "ADO_DOWNLOAD"		    
+                        "ADO_DOWNLOAD",
+			"sudo ln -sf ${InstallDir}/Bison/bison /usr/local/bin/bison"
                     ],
                     "UninstallCommands":
                     [
