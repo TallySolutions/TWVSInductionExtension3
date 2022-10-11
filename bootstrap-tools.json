@@ -961,7 +961,7 @@
             },
             "MacOS"     :
             {
-                "VersionString"  : "3.7.6",
+                "VersionString"  : "3.8.2",
                 "VersionInfo"    : 
                 {
                     "Command"    : "bison --version",
