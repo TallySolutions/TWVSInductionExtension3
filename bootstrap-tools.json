@@ -957,7 +957,7 @@
                 "Installer" : 
                 { 
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallBison",
-                    "InstallDir"      : "/usr/share/Bison",
+                    "InstallDir"      : "/usr/local/bin",
                     "InstallCommands" :
                     [
                         "ADO_DOWNLOAD",
