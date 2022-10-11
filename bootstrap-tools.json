@@ -948,7 +948,7 @@
                 },
                 "VersionInfo" : 
                 {
-                    "Command"    : "${InstallDir}/bison --version",
+                    "Command"    : "bison --version",
                     "OutputType" : "PlainText",
                     "Prefix"     : "v",
                     "Line"       : 1,
@@ -960,9 +960,7 @@
                     "InstallDir"      : "/usr/local/bin",
                     "InstallCommands" :
                     [
-                        "ADO_DOWNLOAD",
-			"sudo ln -sf ${InstallDir}/bison /usr/bin/bison"
-			    
+                        "ADO_DOWNLOAD"		    
                     ],
                     "UninstallCommands":
                     [
