@@ -938,20 +938,31 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "3.5.1",
-                "VersionInfo"    : 
+               "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
                 {
-                    "Command"    : "bison --version",
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Linux-${HOST-ARCH}-BuildTools",
+                        "Package"      : "bisontest"
+                },
+                "VersionInfo" : 
+                {
+                    "Command"    : "${InstallDir}/bison --version",
                     "OutputType" : "PlainText",
+                    "Prefix"     : "v",
                     "Line"       : 1,
-                    "Column"     : 4                },
+                    "Column"     : 1
+                },
                 "Installer" : 
                 { 
-                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Linux+x64+Host#InstallRequiredSoftwareonLinuxx64Host-InstallFlexandBison",
-                    "InstallDir"      : "/usr/bin",
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallBison",
+                    "InstallDir"      : "${TWHome}\\Tools\\Bison",
                     "InstallCommands" :
                     [
-                        "sudo apt-get install bison -y"
+                        "ADO_DOWNLOAD",
+			"sudo ln -sf ${InstallDir}/bison /usr/bin/bison"
+			    
                     ],
                     "UninstallCommands":
                     [
@@ -1408,7 +1419,7 @@
                 {
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
-                        "Feed"         : "Windows-x64-BuildTools",
+                        "Feed"         : "Windows-${HOST-ARCH}-BuildTools",
                         "Package"      : "reflex3.2.11"
                 },
                 "VersionInfo"    : 
@@ -1439,7 +1450,7 @@
                 {
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
-                        "Feed"         : "Linux-x64-BuildTools",
+                        "Feed"         : "Linux-${HOST-ARCH}-BuildTools",
                         "Package"      : "reflex3.2.11"
                 },
                 "VersionInfo"    : 
@@ -1471,7 +1482,7 @@
                 {
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
-                        "Feed"         : "MacOS-x64-BuildTools",
+                        "Feed"         : "MacOS-${HOST-ARCH}-BuildTools",
                         "Package"      : "reflex3.2.11"
                 },
                 "VersionInfo"    : 
