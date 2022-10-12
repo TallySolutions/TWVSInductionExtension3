@@ -943,7 +943,7 @@
                         "Name"         : "ADOService",
                         "Organization" : "TallyWorld",
                         "Feed"         : "Linux-${HOST-ARCH}-BuildTools",
-                        "Package"      : "bison"
+                        "Package"      : "linuxbison"
                 },
 		"VersionString"  : "3.8.2",
                 "VersionInfo" : 
@@ -961,7 +961,8 @@
                     [
                         "ADO_DOWNLOAD",
 			"sudo chmod 775 ${InstallDir}/bison",
-			"sudo ln -sf ${InstallDir}/bison /usr/bin/bison"
+			"sudo ln -sf ${InstallDir}/bison /usr/bin/bison",
+			"sudo ln -sf ${InstallDir}/bison_share /usr/local/share/bison"
                     ],
                     "UninstallCommands":
                     [
