@@ -222,7 +222,7 @@
            }
         },
 	{
-	    "Name"      : ccache
+	    "Name"      : "ccache",
 	    "Linux"     :
             {
                 "VersionString"  : "3.7.7",
