@@ -221,6 +221,35 @@
                 }
            }
         },
+	{
+	    "Name"      : ccache
+	    "Linux"     :
+            {
+                "VersionString"  : "3.7.7",
+                "Command"        : "/usr/bin/ccache",
+                "VersionInfo"    : 
+                {
+                    "Command"    : "${COMMAND} --version",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 4
+                },
+                "Installer" : 
+                { 
+                    "InstallDir"      : "/usr/bin",
+                    "InstallCommands"  : 
+                    [
+                        "sudo apt install ccache -y"
+                    ],
+                    "UninstallCommands": 
+                    [
+                        "sudo apt purge ccache -y"
+                    ],
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Linux+x64+Host#InstallRequiredSoftwareonLinuxx64Host-InstallNinja"
+
+                }
+            }
+        },
         {
             "Name"        : "LLVM",
             "Windows"     :
