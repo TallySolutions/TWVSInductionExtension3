@@ -331,7 +331,7 @@
                     "InstallDir" : "/usr/bin",
                     "InstallCommands"  : 
                     [
-                        "DOWNLOAD ${URL_0} ${TEMPDIR}/llvm.sh",
+                        "sudo DOWNLOAD ${URL_0} ${TEMPDIR}/llvm.sh",
                         "sudo apt update",
                         "sudo chmod +x ${TEMPDIR}/llvm.sh",
                         "sudo ${TEMPDIR}/llvm.sh ${VERSION-MAJOR}",
@@ -570,11 +570,11 @@
                     "InstallDir" : "/usr/bin",
                     "InstallCommands" : 
                     [
-                        "curl -sL https://aka.ms/InstallAzureCLIDeb > az.sh",
-                        "chmod +x az.sh",
+                        "sudo curl -sL https://aka.ms/InstallAzureCLIDeb > az.sh",
+                        "sudo chmod +x az.sh",
                         "sudo bash az.sh",
                         "sudo az upgrade",
-                        "rm -rf az.sh"
+                        "sudo rm -rf az.sh"
                     ],
                     "UninstallCommands":
                     [
@@ -1253,17 +1253,17 @@
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/pages/viewpage.action?spaceKey=TWP&title=Install+Required+Software+on+Linux+x64+Host#InstallRequiredSoftwareonLinuxx64Host-InstallUnikernel(NanoVm)",
                     "InstallCommands" :
                     [
-                        "curl https://ops.city/get.sh -sSfL > ops.sh",
-                        "chmod +x ops.sh",
+                        "sudo curl https://ops.city/get.sh -sSfL > ops.sh",
+                        "sudo chmod +x ops.sh",
                         "sudo usermod -aG kvm ${LOGINID}",
-                        "sh ops.sh",
-                        "rm -f ops.sh",
+                        "sudo sh ops.sh",
+                        "sudo rm -f ops.sh",
                         "sudo apt-get install qemu-kvm qemu-utils -y"
                     ],
                     "UninstallCommands":
                     [   
                         "sudo apt  purge qemu-kvm qemu-utils -y",
-                        "rm -rf ${InstallDir}"
+                        "sudo rm -rf ${InstallDir}"
                     ]
 				}
             }
