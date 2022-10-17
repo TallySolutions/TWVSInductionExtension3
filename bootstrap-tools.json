@@ -265,7 +265,7 @@
                     "InstallDir"      : "/usr/local/bin",
                     "InstallCommands"  : 
                     [
-                        "bew install ccache"
+                        "brew install ccache"
                     ],
                     "UninstallCommands": 
                     [
