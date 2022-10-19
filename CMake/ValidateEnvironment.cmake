@@ -146,7 +146,7 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
    check_linux_package("libatspi2.0-0")
    check_linux_package("libatspi2.0-dev")
    check_linux_package("libudev-dev")
-   check_linux_package("libpng-dev")
+   check_linux_package("libpng-dev")fi
    check_linux_package("libharfbuzz-dev")
    check_linux_package("libfreetype-dev")
    check_linux_package("libfontconfig1-dev")
@@ -191,6 +191,7 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
    check_linux_package("qemu-kvm")
    check_linux_package("qemu-utils")
    check_linux_package("libgtk-3-dev")
+   check_linux_package("libgdl-3-dev")
    check_linux_package_end()
 
 
