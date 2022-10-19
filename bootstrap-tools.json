@@ -727,6 +727,42 @@
             }
         },
         {
+            "Name"        : "TWConsole",
+            "Windows"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Windows-${HOST-ARCH}-BuildTools",
+                        "Package"      : "twconsole"
+                },
+                "VersionInfo" : 
+                {
+                    "Command"    : "${InstallDir}/TWConsole --version",
+                    "OutputType" : "PlainText",
+                    "Prefix"     : "v",
+                    "Line"       : 1,
+                    "Column"     : 1
+                },
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallTWConsole",
+                    "InstallDir"      : "${TWHome}\\Tools\\TWConsole",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "rmdir /S /Q ${InstallDir}"
+                    ]
+                }
+            }
+        },
+
+        {
             "Name"        : "Java",
             "Windows"     :
             {
