@@ -1602,7 +1602,7 @@
             "Name"        : "DoxyGen",
             "Windows"     :
             {
-                "VersionString"  : "1.9.4",
+                "VersionString"  : "1.9.5",
                 "VersionInfo" : 
                 {
                     "Command"    : "${InstallDir}/doxygen -version",
