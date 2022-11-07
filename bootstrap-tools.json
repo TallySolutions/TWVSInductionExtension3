@@ -331,7 +331,7 @@
                     "InstallDir" : "/usr/bin",
                     "InstallCommands"  : 
                     [
-                        "sudo DOWNLOAD ${URL_0} ${TEMPDIR}/llvm.sh",
+                        "DOWNLOAD ${URL_0} ${TEMPDIR}/llvm.sh",
                         "sudo apt update",
                         "sudo chmod +x ${TEMPDIR}/llvm.sh",
                         "sudo ${TEMPDIR}/llvm.sh ${VERSION-MAJOR}",
