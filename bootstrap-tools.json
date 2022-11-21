@@ -1121,7 +1121,7 @@
                 "Installer" : 
                 { 
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallTWAppGen",
-                    "InstallDir"      : "${TWHome}\\Tools\\TWAppGen",
+                    "InstallDir"      : "${TWHome}\\Tools\\TWCLangFormat",
                     "InstallCommands" :
                     [
                         "ADO_DOWNLOAD"
