@@ -1110,7 +1110,14 @@
             "Name"        : "TWCLangFormat",
             "Windows"     :
             {
-                "VersionString"  : "12.0.0",
+               "VersionString"  : "ArtifactoryLatest",
+               "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Windows-${HOST-ARCH}-BuildTools",
+                        "Package"      : "twclangformat"
+                },
                 "VersionInfo"    : 
                 {
                     "Command"    : "${TWHome}\\Tools\\TWCLangFormat\\clang-format.exe --version",
