@@ -1122,6 +1122,7 @@
                 {
                     "Command"    : "${TWHome}\\Tools\\TWCLangFormat\\clang-format.exe --version",
                     "OutputType" : "PlainText",
+		    "Prefix"     :"clang-format version ",
                     "Line"       : 1,
                     "Column"     : 3
                 },
