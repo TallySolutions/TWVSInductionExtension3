@@ -1120,25 +1120,19 @@
                 },
                 "Installer" : 
                 { 
-                    "URL": 
-                    {
-                        "X64"  :  "https://github.com/TallySolutions/TWLLVMCLangFormat.Source/releases/download/12.0.0",
-                        "ARM64":  "https://github.com/TallySolutions/TWLLVMCLangFormat.Source/releases/download/12.0.0",
-                        "Files":  ["clang-format.exe", "_clang-format"]
-                    },
-                    "InstallDir"      : "${TWHome}\\Tools\\TWCLangFormat",
-                    "InstallCommands":
+                 "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallTWAppGen",
+                    "InstallDir"      : "${TWHome}\\Tools\\TWAppGen",
+                    "InstallCommands" :
                     [
-                        "DOWNLOAD ${URL_0} ${InstallDir}\\${FILENAME_0}",
-                        "DOWNLOAD ${URL_1} ${InstallDir}\\${FILENAME_1}",
-                        "copy ${InstallDir}\\_clang-format ${TWHome}\\Workspace"
+                        "ADO_DOWNLOAD"
                     ],
                     "UninstallCommands":
                     [
-                        "DEL /F ${TWHome}\\Workspace\\_clang-format",
                         "rmdir /S /Q ${InstallDir}"
                     ]
-				}, 
+                },
                 "Validations"   : 
                 [
                     {
