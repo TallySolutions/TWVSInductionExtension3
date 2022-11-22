@@ -1110,7 +1110,7 @@
             "Name"        : "TWCLangFormat",
             "Windows"     :
             {
-               "VersionString"  : "ArtifactoryLatest",
+               "VersionType"  : "ArtifactoryLatest",
                "Artifactory" : 
                 {
                         "Name"         : "ADOService",
