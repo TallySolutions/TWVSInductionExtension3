@@ -214,8 +214,8 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
     endif()
 endif()
 
-macro(check_update_git)
-    message(NOTICE "Verifying git HoeBrew environment  ...")
+macro(check_and_fix_homebrew_git_ownership)
+    message(NOTICE "Verifying git HomeBrew Git Ownership  ...")
     execute_process(
         COMMAND   git remote -v
         RESULT_VARIABLE retCode
@@ -223,9 +223,8 @@ macro(check_update_git)
         ERROR_VARIABLE error
         WORKING_DIRECTORY /opt/homebrew
     )
-    message(NOTICE "out ${out} and retCode ${retCode} and error ${error}")
     if(error MATCHES "fatal: detected dubious ownership")
-        message(NOTICE "Ownership issue of .git directory. fixing it...")
+        message(NOTICE "Ownership issue of homebrew .git directory. fixing it with command git config --global --add safe.directory /opt/homebrew ")
         execute_process(
             COMMAND  git config --global --add safe.directory /opt/homebrew
             RESULT_VARIABLE retCode
@@ -233,12 +232,10 @@ macro(check_update_git)
             ERROR_VARIABLE error
         )
         if(error MATCHES "fatal: detected dubious ownership")
-            message(SEND_ERROR "Ownership issue of .git directory not fixed. Please contact TWPMT Team.")
+            message(SEND_ERROR "Ownership issue of homebrew .git directory. Please contact TWPMT Team.")
         endif()
 
     endif()
-    message(NOTICE "OUTside retCode ${retCode} ")
-
 
 endmacro()
 
@@ -248,7 +245,7 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
 
     check_ssh_config()
     check_ssh_environment()
-    check_update_git()
+    check_and_fix_homebrew_git_ownership()
 
     message(NOTICE "Verifying environment variables ...")
 
