@@ -225,16 +225,15 @@ macro(check_update_git)
     )
     message(NOTICE "out ${out} and retCode ${retCode} and error ${error}")
     if(error MATCHES "fatal: detected dubious ownership")
-       message(NOTICE "Inside retCode ${retCode} ")
-        message(SEND_ERROR "Ownership issue of .git directory. fixing it...")
-        #execute_process(
-        #    COMMAND  git config --global --add safe.directory /opt/homebrew
-        #    RESULT_VARIABLE retCode
-         #   OUTPUT_VARIABLE out
-         #   ERROR_VARIABLE error
-       # )
-        if(out MATCHES "fatal: detected dubious ownership")
-            message(SEND_ERROR "Ownership issue of .git directory not fixed. Please contact TWPMT team.")
+        message(NOTICE "Ownership issue of .git directory. fixing it...")
+        execute_process(
+            COMMAND  git config --global --add safe.directory /opt/homebrew
+            RESULT_VARIABLE retCode
+            OUTPUT_VARIABLE out
+            ERROR_VARIABLE error
+        )
+        if(error MATCHES "fatal: detected dubious ownership")
+            message(SEND_ERROR "Ownership issue of .git directory not fixed. Please contact TWPMT Team.")
         endif()
 
     endif()
