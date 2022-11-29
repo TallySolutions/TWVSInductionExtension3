@@ -215,7 +215,7 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
 endif()
 
 macro(check_update_git)
-
+    message(NOTICE "Verifying git HoeBrew environment  ...")
     execute_process(
         COMMAND  cd /opt/homebrew
         COMMAND   git remote -v
