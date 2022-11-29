@@ -224,7 +224,7 @@ macro(check_update_git)
         WORKING_DIRECTORY /opt/homebrew
     )
     message(NOTICE "out ${out} and retCode ${retCode} and error ${error}")
-    if(out MATCHES "fatal: detected dubious ownership")
+    if(error MATCHES "fatal: detected dubious ownership")
        
         message(SEND_ERROR "Ownership issue of .git directory. fixing it...")
         #execute_process(
