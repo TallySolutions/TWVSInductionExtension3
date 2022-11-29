@@ -217,11 +217,11 @@ endif()
 macro(check_update_git)
     message(NOTICE "Verifying git HoeBrew environment  ...")
     execute_process(
-        COMMAND  cd /opt/homebrew
         COMMAND   git remote -v
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
+        WORKING_DIRECTORY /opt/homebrew
     )
     message(NOTICE "out ${out} and retCode ${retCode} and error ${error}")
     if(out MATCHES "fatal: detected dubious ownership")
