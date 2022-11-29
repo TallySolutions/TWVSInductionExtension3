@@ -223,6 +223,7 @@ macro(check_update_git)
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
     )
+    message(NOTICE "out ${out} and retCode ${retCode} and error ${error}")
     if(out MATCHES "fatal: detected dubious ownership")
        
         message(SEND_ERROR "Ownership issue of .git directory. fixing it...")
