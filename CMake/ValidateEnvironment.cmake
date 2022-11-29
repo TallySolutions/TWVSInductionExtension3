@@ -245,6 +245,7 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
 
     check_ssh_config()
     check_ssh_environment()
+    #Since Git 2.35, if HomeBew and Git installed by two different user, then for git to operate we need to set safe directory for Brew home path
     check_and_fix_homebrew_git_ownership()
 
     message(NOTICE "Verifying environment variables ...")
