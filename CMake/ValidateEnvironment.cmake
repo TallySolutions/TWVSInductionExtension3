@@ -214,6 +214,17 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
     endif()
 endif()
 
+macro(check_update_git)
+
+
+    execute_process(
+        COMMAND  git config --global --add safe.directory /opt/homebrew
+        RESULT_VARIABLE retCode
+        OUTPUT_VARIABLE out
+        ERROR_VARIABLE error
+    )
+endmacro()
+
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
     
     message(NOTICE "Verifying ssh config ...")
