@@ -225,7 +225,7 @@ macro(check_update_git)
     )
     message(NOTICE "out ${out} and retCode ${retCode} and error ${error}")
     if(error MATCHES "fatal: detected dubious ownership")
-       
+       message(NOTICE "Inside retCode ${retCode} ")
         message(SEND_ERROR "Ownership issue of .git directory. fixing it...")
         #execute_process(
         #    COMMAND  git config --global --add safe.directory /opt/homebrew
@@ -238,6 +238,7 @@ macro(check_update_git)
         endif()
 
     endif()
+    message(NOTICE "OUTside retCode ${retCode} ")
 
 
 endmacro()
