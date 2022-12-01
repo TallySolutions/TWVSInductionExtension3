@@ -239,6 +239,15 @@ macro(check_and_fix_homebrew_git_ownership)
 
 endmacro()
 
+macro (setup_azure_cli_devops)
+        execute_process(
+            COMMAND  sudo az extension add --name azure-devops
+            RESULT_VARIABLE retCode
+            OUTPUT_VARIABLE out
+            ERROR_VARIABLE error
+        )
+endmacro()
+
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
     
     message(NOTICE "Verifying ssh config ...")
@@ -247,6 +256,9 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
     check_ssh_environment()
     #Since Git 2.35, if HomeBew and Git installed by two different user, then for git to operate we need to set safe directory for Brew home path
     check_and_fix_homebrew_git_ownership()
+    
+    #Setting up azure cl devops
+    setup_azure_cli_devops()
 
     message(NOTICE "Verifying environment variables ...")
 
