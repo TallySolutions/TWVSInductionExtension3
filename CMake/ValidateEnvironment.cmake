@@ -248,6 +248,40 @@ macro (setup_azure_cli_devops)
         )
 endmacro()
 
+macro(check_and_set_swift_integrationt_type_environment)
+
+    execute_process(
+        COMMAND  defaults read com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration
+        RESULT_VARIABLE retCode
+        OUTPUT_VARIABLE out
+        ERROR_VARIABLE error
+    )
+    if(NOT out MATCHES "0")
+
+        execute_process(
+            COMMAND  defaults write com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 0
+            RESULT_VARIABLE retCode
+            OUTPUT_VARIABLE out
+            ERROR_VARIABLE error
+        )
+    endif()
+
+    execute_process(
+        COMMAND  defaults read com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration
+        RESULT_VARIABLE retCode
+        OUTPUT_VARIABLE out
+        ERROR_VARIABLE error
+    )
+
+    if(NOT out MATCHES "0")
+
+        message(SEND_ERROR "Swift integration is not set to old (0).")
+        message(NOTICE "Please run command on terminal 'defaults write com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 0'")
+
+    endif()
+
+endmacro()
+
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
     
     message(NOTICE "Verifying ssh config ...")
@@ -259,6 +293,9 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
     
     #Setting up azure cl devops
     setup_azure_cli_devops()
+    
+    #Setting Sfitf integration to old style
+    check_and_set_swift_integrationt_type_environment()
 
     message(NOTICE "Verifying environment variables ...")
 
