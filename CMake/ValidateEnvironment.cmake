@@ -216,7 +216,6 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
    check_linux_package("pulseaudio")
    check_linux_package("libdrm-dev")
    check_linux_package("libssl-dev")
-   check_linux_package("qemu-kvm")
    check_linux_package("qemu-utils")
    check_linux_package("libgtk-3-dev")
    
