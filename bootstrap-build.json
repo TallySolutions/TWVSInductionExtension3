@@ -8,8 +8,8 @@
     "AdditionalTargets"     :
     [
         {
-            "Name"  : "Generate Documentation",
-            "Suffix": "_GenDoc"
+            "Name"  : "Build Test Library",
+            "Suffix": "_Test"
         },
         {
             "Name"  : "Create Package",
