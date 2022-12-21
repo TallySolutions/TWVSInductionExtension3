@@ -118,8 +118,36 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Windows)
 
 endif()
 
-if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
+macro (install_patch_libssl_forubuntu22)
 
+        execute_process(COMMAND  lsb_release -r OUTPUT_VARIABLE outvar RESULT_VARIABLE retCode ERROR_VARIABLE error)
+        if(NOT retCode STREQUAL "0")
+                message(SEND_ERROR "Failed to execute lsb_release -r command to get ubuntu distribution version")
+        endif()
+
+        if(outvar MATCHES "22.04")
+                message(NOTICE "Installed Ubuntu Version ${outvar}")
+                file(STRINGS /etc/ssl/openssl.cnf content)
+                string(FIND "${content}" "#openssl_conf = openssl_init" pos)
+                if(pos STREQUAL "-1")
+                        message(NOTICE "Fixing (Applying temp patch) libssl issue with Ubuntu 22.04 version. Ref https://github.com/Azure/azure-cli/issues/22230")
+                        separate_arguments(commandToBeExecuted NATIVE_COMMAND "sudo wget -v http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb")
+                        execute_process(COMMAND ${commandToBeExecuted} OUTPUT_VARIABLE outvar RESULT_VARIABLE retCode ERROR_VARIABLE error COMMAND_ECHO STDOUT COMMAND_ERROR_IS_FATAL ANY)
+
+                        separate_arguments(commandToBeExecuted NATIVE_COMMAND "sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb")
+                        execute_process(COMMAND ${commandToBeExecuted} OUTPUT_VARIABLE outvar RESULT_VARIABLE retCode ERROR_VARIABLE error COMMAND_ECHO STDOUT COMMAND_ERROR_IS_FATAL ANY)
+
+                        execute_process(COMMAND ${CMAKE_COMMAND} -E rm -fr libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb  OUTPUT_VARIABLE outvar RESULT_VARIABLE retCode ERROR_VARIABLE error COMMAND_ECHO STDOUT COMMAND_ERROR_IS_FATAL ANY)
+
+                        separate_arguments(commandToBeExecuted NATIVE_COMMAND "sudo sed -i 's/openssl_conf = openssl_init/#openssl_conf = openssl_init/g' /etc/ssl/openssl.cnf")
+                        execute_process(COMMAND ${commandToBeExecuted}  OUTPUT_VARIABLE outvar RESULT_VARIABLE retCode ERROR_VARIABLE error COMMAND_ECHO STDOUT COMMAND_ERROR_IS_FATAL ANY)
+
+                endif()
+        endif()
+endmacro()
+
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
+   install_patch_libssl_forubuntu22()
    message(NOTICE "Verifying packages installed on Linux ...")
 
    set(failed_package_list)
