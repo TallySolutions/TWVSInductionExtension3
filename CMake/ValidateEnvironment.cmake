@@ -119,11 +119,12 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Windows)
 endif()
 
 macro (install_patch_libssl_forubuntu22)
-        message(NOTICE "Lets first find what is wsl version ")
+
         execute_process(COMMAND  lsb_release -r OUTPUT_VARIABLE outvar RESULT_VARIABLE retCode ERROR_VARIABLE error)
         if(NOT retCode STREQUAL "0")
                 message(SEND_ERROR "Failed to execute lsb_release -r command to get ubuntu distribution version")
         endif()
+        message(NOTICE "Installed Ubuntu Version ${outvar}.")
         if(outvar MATCHES "22.04")
                 message(NOTICE "Ubuntu 22.04 is installed.")
                 file(STRINGS /etc/ssl/openssl.cnf content)
