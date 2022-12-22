@@ -248,12 +248,12 @@ macro(check_and_fix_homebrew_git_ownership)
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
-        WORKING_DIRECTORY /opt/homebrew
+        WORKING_DIRECTORY /usr/local/Homebrew
     )
     if(error MATCHES "fatal: detected dubious ownership")
-        message(NOTICE "Ownership issue of homebrew .git directory. fixing it with command git config --global --add safe.directory /opt/homebrew ")
+        message(NOTICE "Ownership issue of homebrew .git directory. fixing it with command git config --global --add safe.directory /usr/local/Homebrew ")
         execute_process(
-            COMMAND  git config --global --add safe.directory /opt/homebrew
+            COMMAND  git config --global --add safe.directory /usr/local/Homebrew
             RESULT_VARIABLE retCode
             OUTPUT_VARIABLE out
             ERROR_VARIABLE error
