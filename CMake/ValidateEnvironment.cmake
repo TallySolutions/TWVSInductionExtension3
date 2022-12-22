@@ -244,12 +244,6 @@ endif()
 macro(check_and_fix_homebrew_git_ownership)
     message(NOTICE "Verifying git HomeBrew Git Ownership  ...")
     execute_process(
-        COMMAND  eval $(/opt/homebrew/bin/brew shellenv)
-        RESULT_VARIABLE retCode
-        OUTPUT_VARIABLE out
-        ERROR_VARIABLE error
-    )
-    execute_process(
         COMMAND   git remote -v
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
