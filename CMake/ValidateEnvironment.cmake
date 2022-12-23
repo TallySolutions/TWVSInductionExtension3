@@ -244,16 +244,31 @@ endif()
 macro(check_and_fix_homebrew_git_ownership)
     message(NOTICE "Verifying git HomeBrew Git Ownership  ...")
     execute_process(
+        COMMAND  sysctl -a
+        RESULT_VARIABLE retCode
+        OUTPUT_VARIABLE out
+        ERROR_VARIABLE error
+		COMMAND_ERROR_IS_FATAL ANY
+    )
+	
+	string(FIND ${out} "GenuineIntel" substr)
+	if(DEFINED substr AND NOT substr STREQUAL "")
+	    set(homebrewpath /opt/homebrew)
+	else ()
+		set(homebrewpath /usr/local/Homebrew)
+	endif ()
+	
+    execute_process(
         COMMAND   git remote -v
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
-        WORKING_DIRECTORY /opt/homebrew
+        WORKING_DIRECTORY ${homebrewpath}
     )
     if(error MATCHES "fatal: detected dubious ownership")
-        message(NOTICE "Ownership issue of homebrew .git directory. fixing it with command git config --global --add safe.directory /opt/homebrew ")
+        message(NOTICE "Ownership issue of homebrew .git directory. fixing it with command git config --global --add safe.directory ${homebrewpath} ")
         execute_process(
-            COMMAND  git config --global --add safe.directory /opt/homebrew
+            COMMAND  git config --global --add safe.directory ${homebrewpath}
             RESULT_VARIABLE retCode
             OUTPUT_VARIABLE out
             ERROR_VARIABLE error
@@ -263,6 +278,9 @@ macro(check_and_fix_homebrew_git_ownership)
         endif()
 
     endif()
+	
+
+endmacro()
 
 endmacro()
 
