@@ -250,7 +250,6 @@ macro(check_and_fix_homebrew_git_ownership)
         ERROR_VARIABLE error
 	COMMAND_ECHO STDOUT
 	ECHO_OUTPUT_VARIABLE
-        COMMAND_ERROR_IS_FATAL ANY
     )
 	
     if(DEFINED out AND out STREQUAL "arm64")
@@ -266,7 +265,6 @@ macro(check_and_fix_homebrew_git_ownership)
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
 	COMMAND_ECHO STDOUT
-	COMMAND_ERROR_IS_FATAL ANY
 	ECHO_OUTPUT_VARIABLE
         WORKING_DIRECTORY ${homebrewpath}
     )
@@ -278,7 +276,6 @@ macro(check_and_fix_homebrew_git_ownership)
             OUTPUT_VARIABLE out
 	    COMMAND_ECHO STDOUT
             ERROR_VARIABLE error
-	    COMMAND_ERROR_IS_FATAL ANY
 	    ECHO_OUTPUT_VARIABLE
 	    COMMAND_ECHO STDOUT
         )
