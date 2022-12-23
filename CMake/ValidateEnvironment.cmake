@@ -248,6 +248,8 @@ macro(check_and_fix_homebrew_git_ownership)
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
+	COMMAND_ECHO STDOUT
+	ECHO_OUTPUT_VARIABLE
         COMMAND_ERROR_IS_FATAL ANY
     )
 	
@@ -256,12 +258,16 @@ macro(check_and_fix_homebrew_git_ownership)
     else ()
         set(homebrewpath /usr/local/Homebrew)
     endif ()
+    message(NOTICE "Using homebrewpath ${homebrewpath}")
 	
     execute_process(
         COMMAND   git remote -v
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
+	COMMAND_ECHO STDOUT
+	COMMAND_ERROR_IS_FATAL ANY
+	ECHO_OUTPUT_VARIABLE
         WORKING_DIRECTORY ${homebrewpath}
     )
     if(error MATCHES "fatal: detected dubious ownership")
@@ -270,7 +276,11 @@ macro(check_and_fix_homebrew_git_ownership)
             COMMAND  git config --global --add safe.directory ${homebrewpath}
             RESULT_VARIABLE retCode
             OUTPUT_VARIABLE out
+	    COMMAND_ECHO STDOUT
             ERROR_VARIABLE error
+	    COMMAND_ERROR_IS_FATAL ANY
+	    ECHO_OUTPUT_VARIABLE
+	    COMMAND_ECHO STDOUT
         )
         if(error MATCHES "fatal: detected dubious ownership")
             message(SEND_ERROR "Ownership issue of homebrew .git directory. Please contact TWPMT Team.")
