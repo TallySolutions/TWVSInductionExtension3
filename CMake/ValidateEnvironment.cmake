@@ -244,19 +244,18 @@ endif()
 macro(check_and_fix_homebrew_git_ownership)
     message(NOTICE "Verifying git HomeBrew Git Ownership  ...")
     execute_process(
-        COMMAND  sysctl -a
+        COMMAND  uname -m
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
-		COMMAND_ERROR_IS_FATAL ANY
+        COMMAND_ERROR_IS_FATAL ANY
     )
 	
-	string(FIND ${out} "GenuineIntel" substr)
-	if(DEFINED substr AND NOT substr STREQUAL "")
-	    set(homebrewpath /opt/homebrew)
-	else ()
-		set(homebrewpath /usr/local/Homebrew)
-	endif ()
+    if(DEFINED out AND out STREQUAL "arm64")
+	set(homebrewpath /opt/homebrew)
+    else ()
+        set(homebrewpath /usr/local/Homebrew)
+    endif ()
 	
     execute_process(
         COMMAND   git remote -v
