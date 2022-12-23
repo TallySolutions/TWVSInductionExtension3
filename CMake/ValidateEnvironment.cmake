@@ -275,12 +275,7 @@ macro(check_and_fix_homebrew_git_ownership)
         if(error MATCHES "fatal: detected dubious ownership")
             message(SEND_ERROR "Ownership issue of homebrew .git directory. Please contact TWPMT Team.")
         endif()
-
-    endif()
-	
-
-endmacro()
-
+    endif()	
 endmacro()
 
 macro (setup_azure_cli_devops)
