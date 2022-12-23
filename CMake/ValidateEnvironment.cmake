@@ -244,26 +244,42 @@ endif()
 macro(check_and_fix_homebrew_git_ownership)
     message(NOTICE "Verifying git HomeBrew Git Ownership  ...")
     execute_process(
+        COMMAND  uname -m
+        RESULT_VARIABLE retCode
+        OUTPUT_VARIABLE out
+        ERROR_VARIABLE error
+	ECHO_OUTPUT_VARIABLE
+    )
+	
+    if(DEFINED out AND out STREQUAL "arm64")
+	set(homebrewpath /opt/homebrew)
+    else ()
+        set(homebrewpath /usr/local/Homebrew)
+    endif ()
+    message(NOTICE "Using homebrewpath ${homebrewpath}")
+	
+    execute_process(
         COMMAND   git remote -v
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
-        WORKING_DIRECTORY /opt/homebrew
+	COMMAND_ECHO STDOUT
+        WORKING_DIRECTORY ${homebrewpath}
     )
     if(error MATCHES "fatal: detected dubious ownership")
-        message(NOTICE "Ownership issue of homebrew .git directory. fixing it with command git config --global --add safe.directory /opt/homebrew ")
+        message(NOTICE "Ownership issue of homebrew .git directory. fixing it with command git config --global --add safe.directory ${homebrewpath} ")
         execute_process(
-            COMMAND  git config --global --add safe.directory /opt/homebrew
+            COMMAND  git config --global --add safe.directory ${homebrewpath}
             RESULT_VARIABLE retCode
             OUTPUT_VARIABLE out
+	    COMMAND_ECHO STDOUT
             ERROR_VARIABLE error
+	    COMMAND_ECHO STDOUT
         )
         if(error MATCHES "fatal: detected dubious ownership")
             message(SEND_ERROR "Ownership issue of homebrew .git directory. Please contact TWPMT Team.")
         endif()
-
-    endif()
-
+    endif()	
 endmacro()
 
 macro (setup_azure_cli_devops)
