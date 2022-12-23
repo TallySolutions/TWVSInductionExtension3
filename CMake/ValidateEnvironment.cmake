@@ -248,7 +248,6 @@ macro(check_and_fix_homebrew_git_ownership)
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
-	COMMAND_ECHO STDOUT
 	ECHO_OUTPUT_VARIABLE
     )
 	
@@ -265,7 +264,6 @@ macro(check_and_fix_homebrew_git_ownership)
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
 	COMMAND_ECHO STDOUT
-	ECHO_OUTPUT_VARIABLE
         WORKING_DIRECTORY ${homebrewpath}
     )
     if(error MATCHES "fatal: detected dubious ownership")
@@ -276,7 +274,6 @@ macro(check_and_fix_homebrew_git_ownership)
             OUTPUT_VARIABLE out
 	    COMMAND_ECHO STDOUT
             ERROR_VARIABLE error
-	    ECHO_OUTPUT_VARIABLE
 	    COMMAND_ECHO STDOUT
         )
         if(error MATCHES "fatal: detected dubious ownership")
