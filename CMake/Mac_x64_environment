@@ -1,0 +1,2 @@
+PATH=PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/User/Shared/LLD;/usr/local/bin/brew
+HOME=/Users/$ENV{USER}
