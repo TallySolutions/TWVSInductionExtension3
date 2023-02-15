@@ -1,2 +1,2 @@
-PATH=PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/User/Shared/LLD;/usr/local/bin/brew
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/usr/opt/homebrew/bin
 HOME=/Users/$ENV{USER}
