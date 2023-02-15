@@ -1,0 +1,2 @@
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/homebrew/bin:/opt/homebrew/opt/ccache/libexec
+HOME=/Users/$ENV{USER}
