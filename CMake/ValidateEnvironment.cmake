@@ -50,18 +50,22 @@ endmacro()
 macro(check_ssh_environment)
 
     if(NOT EXISTS ".ssh/environment")
+        execute_process(
+        COMMAND  uname -m
+        RESULT_VARIABLE retCode
+        OUTPUT_VARIABLE out
+        ERROR_VARIABLE error
+        )
 
-        message(SEND_ERROR "File not found: .ssh/environment (at user's home directory)")
-        message(NOTICE "Please follow the document:  https://tallywiki.tallysolutions.com/display/TWP/CMakePreset#CMakePreset-AdditionalInstructionforMacOS")
-        if(CMAKE_HOST_SYSTEM_NAME STREQUAL Darwin)
-            message(NOTICE "Commands to restart ssh:")
-            message(NOTICE "   sudo killall sshd")
-            message(NOTICE "Note: above command will restart ssh daemon, so you need to reconnect your existing ssh sessions.")
-        endif()
-        if(CMAKE_HOST_SYSTEM_NAME STREQUAL Linux)
-            message(NOTICE "Commands to restart ssh:")
-            message(NOTICE "   sudo service ssh restart")
-        endif()
+        if( out MATCHES "arm64" )
+            file(WRITE ".ssh/environment" "PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/homebrew/bin:/opt/homebrew/opt/ccache/libexec\n")
+            file(APPEND ".ssh/environment" "HOME=/Users/$ENV{USER}\n")
+        else ()
+            file(WRITE ".ssh/environment" "PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/usr/opt/homebrew/bin\n")
+            file(APPEND ".ssh/environment" "HOME=/Users/$ENV{USER}\n")
+        endif ()
+        file(CHMOD .ssh/environment PERMISSIONS OWNER_READ OWNER_WRITE)
+
     endif()
 
     execute_process(
@@ -72,14 +76,18 @@ macro(check_ssh_environment)
     )
 
     if(NOT out MATCHES "-rw-------")
-       
-        message(SEND_ERROR "File .ssh/environment does not have permission 600.")
-        message(NOTICE "Please follow the document:  https://tallywiki.tallysolutions.com/display/TWP/CMakePreset#CMakePreset-AdditionalInstructionforMacOS")
+
+        message(NOTICE "File .ssh/environment does not have permission 600.")
+        execute_process(
+            COMMAND  chmod 600 ~/.ssh/environment
+            RESULT_VARIABLE retCode
+            OUTPUT_VARIABLE out
+            ERROR_VARIABLE error
+        )
 
     endif()
 
 endmacro()
-
 
 macro(check_env_variable variable)
 
@@ -249,7 +257,6 @@ macro(check_and_fix_homebrew_git_ownership)
         RESULT_VARIABLE retCode
         OUTPUT_VARIABLE out
         ERROR_VARIABLE error
-	ECHO_OUTPUT_VARIABLE
     )
 	
     if(DEFINED out AND out STREQUAL "arm64")
