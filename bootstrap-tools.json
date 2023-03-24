@@ -277,39 +277,6 @@
 	},
         {
             "Name"        : "LLVM",
-            "Windows"     :
-            {
-                "VersionString"  : "15.0.4",
-                "Command"        : "${TWHome}\\Tools\\LLVM\\bin\\clang++",
-                "VersionInfo"    : 
-                {
-                    "Command"    : "${COMMAND} --version",
-                    "OutputType" : "PlainText",
-                    "Line"       : 1,
-                    "Column"     : 3
-                },
-                "Installer" : 
-                { 
-                    "URL": 
-                    {
-                        "X64"  :  "https://github.com/llvm/llvm-project/releases/download/llvmorg-${VERSION}/LLVM-${VERSION}-win64.exe",
-                        "ARM64":  "https://github.com/llvm/llvm-project/releases/download/llvmorg-${VERSION}/LLVM-${VERSION}-arm64.exe"
-                    },
-                    "InstallDir" : "${TWHome}\\Tools\\LLVM",
-                    "InstallCommands"  : 
-                    [
-                        "DOWNLOAD ${URL_0} ${TEMPDIR}\\${FILENAME_0}",
-                        "start /wait ${TEMPDIR}\\${FILENAME_0} /S /D=${InstallDir}",
-                        "del /F ${TEMPDIR}\\${FILENAME_0}"
-                    ],
-                    "UninstallCommands": 
-                    [
-                        "start /wait ${InstallDir}\\Uninstall.exe /S"
-                    ],
-                    "InstallerArgs" : "/S /D=${InstallDir}",
-                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallLLVM"
-                }
-            },
             "Linux"     :
             {
                 "VersionString"  : "15.0.4",
