@@ -394,7 +394,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "2.25",
+                "VersionString"  : "2.40.0",
                 "VersionInfo"    : 
                 {
                     "Command"    : "git version",
