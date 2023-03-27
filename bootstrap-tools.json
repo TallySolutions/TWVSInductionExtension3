@@ -50,7 +50,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "3.25.0",
+                "VersionString"  : "3.26.1",
                 "Command"        : "/usr/bin/cmake",
                 "VersionInfo"    : 
                 {
@@ -86,7 +86,7 @@
             },
             "MacOS"     :
             {
-                "VersionString"  : "3.25.0",
+                "VersionString"  : "3.26.1",
                 "Command"        : "/usr/local/bin/cmake",
                 "VersionInfo"    : 
                 {
@@ -279,7 +279,7 @@
             "Name"        : "LLVM",
             "Linux"     :
             {
-                "VersionString"  : "15.0.4",
+                "VersionString"  : "16.0.0",
                 "Command"        : "clang++",
                 "VersionInfo"    : 
                 {
@@ -325,7 +325,7 @@
             "Name"        : "git",
             "Windows"     :
             {
-                "VersionString"  : "2.34.0",
+                "VersionString"  : "2.40.0",
                 "VersionInfo"    : 
                 {
                     "Command"    : "git version",
