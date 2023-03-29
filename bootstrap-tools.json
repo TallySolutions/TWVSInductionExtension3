@@ -128,7 +128,7 @@
             "Name"        : "Ninja",
             "Windows"     :
             {
-                "VersionString"  : "1.10.2",
+                "VersionString"  : "1.11.0",
                 "Command"        : "${VSNinjaProduct}",
                 "VersionInfo"    : 
                 {
@@ -145,7 +145,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "1.10.0",
+                "VersionString"  : "1.11.1",
                 "Command"        : "/usr/bin/ninja",
                 "VersionInfo"    : 
                 {
@@ -431,7 +431,7 @@
             },
             "MacOS"     :
             {
-                "VersionString"  : "2.30",
+                "VersionString"  : "2.33.0",
                 "VersionInfo"    : 
                 {
                     "Command"    : "git version",
