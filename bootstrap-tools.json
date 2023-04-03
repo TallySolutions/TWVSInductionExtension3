@@ -145,7 +145,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "1.11.1",
+                "VersionString"  : "1.10.0",
                 "Command"        : "/usr/bin/ninja",
                 "VersionInfo"    : 
                 {
