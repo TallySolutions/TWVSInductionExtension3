@@ -344,12 +344,12 @@
                     "InstallCommands"  : 
                     [
                         "DOWNLOAD ${URL_0} ${TEMPDIR}\\Git-${VERSION}-64-bit.exe",
-                        "start /wait ${TEMPDIR}\\Git-${VERSION}-64-bit.exe /SILENT",
+                        "start /wait ${TEMPDIR}\\Git-${VERSION}-64-bit.exe ",
                         "DEL /F ${TEMPDIR}\\Git-${VERSION}-64-bit.exe"
                     ],
                     "UninstallCommands" :
                     [
-                        "start /wait \"${InstallDir}\\unins001.exe\" /SILENT"
+                        "start /wait \"${InstallDir}\\unins001.exe\" "
                     ],
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallGit"
                 },
