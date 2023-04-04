@@ -349,7 +349,8 @@
                     ],
                     "UninstallCommands" :
                     [
-                        "start /wait \"${InstallDir}\\unins001.exe\" "
+			"chdir ${InstallDir}"
+                        "start /wait unins001.exe "
                     ],
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallGit"
                 },
