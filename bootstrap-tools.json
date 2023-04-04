@@ -349,7 +349,8 @@
                     ],
                     "UninstallCommands" :
                     [
-                        "start /d \"${InstallDir}\" /wait unins001.exe ",
+			"mklink ${TEMPDIR}\\unins001.exe \"${InstallDir}\\unins001.exe\" ",
+                        "start /d \"${TEMPDIR}\" /wait unins001.exe ",
                     ],
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallGit"
                 },
