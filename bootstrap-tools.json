@@ -407,7 +407,7 @@
                     "InstallDir"      : "/usr/bin",
                     "InstallCommands" : 
                     [
-                        "sudo add-apt-repository ppa:git-core/ppa",
+                        "sudo add-apt-repository ppa:git-core/ppa -y",
                         "sudo apt update",
                         "sudo apt-get install git -y",
                         "sudo git config --global core.autocrlf input"
