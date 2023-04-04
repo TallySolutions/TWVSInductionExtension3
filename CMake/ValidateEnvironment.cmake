@@ -123,6 +123,11 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL Windows)
         message(SEND_ERROR "Invalid JAVA_HOME set -> file not found: $ENV{JAVA_HOME}/bin/java.exe")
 
      endif()
+     #Special handling for Git uninstall
+     set(gitPath "C:/Program Files/Git")
+     if(NOT EXIST ${gitPath}/unins001.exe)
+     	execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink unins001.exe unins000.exe WORKING_DIRECTORY ${gitPath} COMMAND_ECHO STDOUT COMMAND_ERROR_IS_FATAL ANY)
+     endif()
 
 endif()
 
