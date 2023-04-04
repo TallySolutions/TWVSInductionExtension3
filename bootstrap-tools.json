@@ -344,7 +344,7 @@
                     "InstallCommands"  : 
                     [
                         "DOWNLOAD ${URL_0} ${TEMPDIR}\\Git-${VERSION}-64-bit.exe",
-                        "start /wait ${TEMPDIR}\\Git-${VERSION}-64-bit.exe ",
+                        "start /wait ${TEMPDIR}\\Git-${VERSION}-64-bit.exe /SILENT",
                         "DEL /F ${TEMPDIR}\\Git-${VERSION}-64-bit.exe"
                     ],
                     "UninstallCommands" :
