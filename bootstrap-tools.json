@@ -50,7 +50,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "3.25.0",
+                "VersionString"  : "3.26.1",
                 "Command"        : "/usr/bin/cmake",
                 "VersionInfo"    : 
                 {
@@ -86,7 +86,7 @@
             },
             "MacOS"     :
             {
-                "VersionString"  : "3.25.0",
+                "VersionString"  : "3.26.1",
                 "Command"        : "/usr/local/bin/cmake",
                 "VersionInfo"    : 
                 {
@@ -128,7 +128,7 @@
             "Name"        : "Ninja",
             "Windows"     :
             {
-                "VersionString"  : "1.10.2",
+                "VersionString"  : "1.11.0",
                 "Command"        : "${VSNinjaProduct}",
                 "VersionInfo"    : 
                 {
@@ -279,7 +279,7 @@
             "Name"        : "LLVM",
             "Linux"     :
             {
-                "VersionString"  : "15.0.4",
+                "VersionString"  : "16.0.0",
                 "Command"        : "clang++",
                 "VersionInfo"    : 
                 {
@@ -325,7 +325,7 @@
             "Name"        : "git",
             "Windows"     :
             {
-                "VersionString"  : "2.34.0",
+                "VersionString"  : "2.40.0",
                 "VersionInfo"    : 
                 {
                     "Command"    : "git version",
@@ -349,7 +349,7 @@
                     ],
                     "UninstallCommands" :
                     [
-                        "start /wait \"${InstallDir}\\unins001.exe\" /SILENT"
+                        "start /d \"${InstallDir}\" /wait unins000.exe "
                     ],
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallGit"
                 },
@@ -394,7 +394,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "2.25",
+                "VersionString"  : "2.40.0",
                 "VersionInfo"    : 
                 {
                     "Command"    : "git version",
@@ -407,15 +407,13 @@
                     "InstallDir"      : "/usr/bin",
                     "InstallCommands" : 
                     [
-                        "sudo add-apt-repository ppa:git-core/ppa",
+                        "sudo add-apt-repository ppa:git-core/ppa -y",
                         "sudo apt update",
                         "sudo apt-get install git -y",
                         "sudo git config --global core.autocrlf input"
                     ],
                     "UninstallCommands":
                     [
-                        "sudo add-apt-repository ppa:git-core/ppa",
-                        "sudo apt update",
                         "sudo apt-get purge git -y"
                     ],
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Linux+x64+Host#InstallRequiredSoftwareonLinuxx64Host-InstallGit"
@@ -431,7 +429,7 @@
             },
             "MacOS"     :
             {
-                "VersionString"  : "2.30",
+                "VersionString"  : "2.33.0",
                 "VersionInfo"    : 
                 {
                     "Command"    : "git version",
