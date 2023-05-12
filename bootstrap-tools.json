@@ -857,7 +857,7 @@
 			"ARM64":  "https://github.com/JetBrains/kotlin/releases/download/v1.8.21/kotlin-compiler-1.8.21.zip"
                     },
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallFlexandBison",
-                    "InstallDir"      : "${TWHome}\\Tools",
+                    "InstallDir"      : "${TWHome}\\Tools\\kotlin",
                     "Installcommands"    :
                     [
                         "DOWNLOAD ${URL_0} ${TEMPDIR}\\kotlin-compiler-1.8.21.zip",
