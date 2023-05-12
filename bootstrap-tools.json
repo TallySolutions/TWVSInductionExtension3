@@ -844,10 +844,10 @@
                 "VersionString"  : "1.8.21",
                 "VersionInfo"    : 
                 {
-                    "Command"    : "${InstallDir}\\kotlin.exe --version",
+                    "Command"    : "${InstallDir}\\kotlinc\\bin\\kotlinc -version",
                     "OutputType" : "PlainText",
                     "Line"       : 1,
-                    "Column"     : 4                
+                    "Column"     : 3                
                 },
                 "Installer" : 
                 { 
