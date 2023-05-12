@@ -837,6 +837,40 @@
                 }
             }
         },
+	{
+	    "Name"        : "Kotlin",
+            "Windows"     :
+            {
+                "VersionString"  : "1.8.21",
+                "VersionInfo"    : 
+                {
+                    "Command"    : "${InstallDir}\\kotlinc\\bin\\kotlinc -version",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+                },
+                "Installer" : 
+                { 
+                    "URL": 
+                    {
+                        "X64"  :  "https://github.com/JetBrains/kotlin/releases/download/v1.8.21/kotlin-compiler-1.8.21.zip",
+			"ARM64":  "https://github.com/JetBrains/kotlin/releases/download/v1.8.21/kotlin-compiler-1.8.21.zip"
+                    },
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallFlexandBison",
+                    "InstallDir"      : "${TWHome}\\Tools\\Kotlin",
+                    "Installcommands"    :
+                    [
+                        "DOWNLOAD ${URL_0} ${TEMPDIR}\\kotlin-compiler-1.8.21.zip",
+                        "UNZIP ${TEMPDIR}\\kotlin-compiler-1.8.21.zip",
+                        "DEL /F ${TEMPDIR}\\kotlin-compiler-1.8.21.zip"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "rmdir /S /Q ${InstallDir}"
+                    ],
+                }
+            }
+	},
         {
             "Name"        : "Bison",
             "Windows"     :
