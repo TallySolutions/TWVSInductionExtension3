@@ -279,7 +279,7 @@
             "Name"        : "LLVM",
             "Linux"     :
             {
-                "VersionString"  : "16.0.0",
+                "VersionString"  : "16.0.4",
                 "Command"        : "clang++",
                 "VersionInfo"    : 
                 {
@@ -1480,7 +1480,7 @@
             "Name"        : "DoxyGen",
             "Windows"     :
             {
-                "VersionString"  : "1.9.6",
+                "VersionString"  : "1.9.7",
                 "VersionInfo" : 
                 {
                     "Command"    : "${InstallDir}/doxygen -version",
