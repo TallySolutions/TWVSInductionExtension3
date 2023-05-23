@@ -1281,7 +1281,7 @@
             }
         },
      {
-            "Name"        : "RefexLib",
+            "Name"        : "ReflexLib",
             "Windows"     :
             {
                 "VersionType" : "ArtifactoryLatest",
