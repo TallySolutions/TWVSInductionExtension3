@@ -279,7 +279,7 @@
             "Name"        : "LLVM",
             "Linux"     :
             {
-                "VersionString"  : "16.0.5",
+                "VersionString"  : "16.0.6",
                 "Command"        : "clang++",
                 "VersionInfo"    : 
                 {
