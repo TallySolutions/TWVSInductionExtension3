@@ -301,7 +301,7 @@
                         "DOWNLOAD ${URL_0} ${TEMPDIR}/llvm.sh",
                         "sudo apt update",
                         "sudo chmod +x ${TEMPDIR}/llvm.sh",
-                        "sudo ${TEMPDIR}/llvm.sh ${VERSION-MAJOR} \r",
+                        "sudo yes '' |${TEMPDIR}/llvm.sh ${VERSION-MAJOR} ",
                         "sudo rm ${TEMPDIR}/llvm.sh",
                         "sudo ln -sf /usr/bin/clang-${VERSION-MAJOR} /usr/bin/clang",
                         "sudo ln -sf /usr/bin/clang++-${VERSION-MAJOR} /usr/bin/clang++",
