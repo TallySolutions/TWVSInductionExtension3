@@ -1168,7 +1168,7 @@
                     "InstallCommands" :
                     [
                         "curl https://ops.city/get.sh -sSfL > ops.sh",
-                        "chmod +x ops.sh",
+                        "sudo chmod +x ops.sh",
                         "sudo usermod -aG kvm ${LOGINID}",
                         "sh ops.sh",
                         "rm -f ops.sh",
