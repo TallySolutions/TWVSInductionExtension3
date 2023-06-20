@@ -201,13 +201,13 @@
                 "null"
             ],
             "properties": {
-                "PlistFileURL": {
+                "BundlePathUrl": {
                     "type": [
                         "string",
                         "null"
                     ]
                 },
-                "PlistLocalPath": {
+                "BundlePathLocal": {
                     "type": [
                         "string",
                         "null"
@@ -215,8 +215,8 @@
                 }
             },
             "required": [
-                "PlistFileURL",
-                "PlistLocalPath"
+                "BundlePathUrl",
+                "BundlePathLocal"
             ]
         },
         "Property": {
@@ -242,6 +242,27 @@
             "required": [
                 "Name",
                 "Value"
+            ]
+        },
+        "TextMateLanguageGrammer": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "properties": {
+                "Name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "LanguageService": {
+                    "$ref": "#/definitions/LanguageServiceDef"
+                }
+            },
+            "required": [
+                "Name",
+                "LanguageService"
             ]
         },
         "RequiredSoftware": {
@@ -555,6 +576,16 @@
                 "$ref": "#/definitions/RequiredSoftware"
             }
         },
+        "TWTextMakeLanguageGrammers": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/TWTextMakeLanguageGrammer"
+            }
+        },
+
         "ValidationCMakeFile": {
             "type": [
                 "string",

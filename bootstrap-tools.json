@@ -18,14 +18,15 @@
         "Linux"             :  "/usr/share",
         "MacOS"             :  "/Users/Shared"
     },
-    "TWAppIdCompiler"       :
-    {
-        "LanguageService"   : 
+    "TextMateLanguageGrammers": [
         {
-            "PlistFileURL"  : "${BootstrapURL}/TWAppIDCompiler/Language.plist",
-            "PlistLocalPath": "${UserProfile}\\.vs\\Extensions\\TWAppIDLanguage\\Syntaxes\\Language.plist"
+            "Name": "TWAppIdCompiler",
+            "LanguageService": {
+                "BundlePathUrl": "https://github.com/TallySolutions/TWVSExtension/raw/Work/TWAppIdCompiler/TextMateLanguageGrammers/TWAppIdCompiler.tmbundle.zip",
+                "BundlePathLocal": "${UserProfile}\\.vs\\Extensions\\TextMateLanguageGrammers\\TWAppIdCompiler.tmbundle.zip"
+            }
         }
-    },
+    ],
     "RequiredSoftwares" :
     [
         
@@ -279,7 +280,7 @@
             "Name"        : "LLVM",
             "Linux"     :
             {
-                "VersionString"  : "16.0.6",
+                "VersionString"  : "16.0.5",
                 "Command"        : "clang++",
                 "VersionInfo"    : 
                 {
