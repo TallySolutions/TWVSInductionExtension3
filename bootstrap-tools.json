@@ -25,6 +25,20 @@
                 "BundlePathUrl": "https://github.com/TallySolutions/TWVSExtension/raw/Work/TextMate/TextMateLanguageGrammers/TWAppIDCompiler.tmbundle.zip",
                 "BundlePathLocal": "${UserProfile}\\.vs\\Extensions\\TextMateLanguageGrammers\\TWAppIDCompiler.tmbundle.zip"
             }
+        },
+	{
+            "Name": "Kotlin",
+            "LanguageService": {
+                "BundlePathUrl": "https://github.com/TallySolutions/TWVSExtension/raw/Work/TextMate/TextMateLanguageGrammers/Kotlin.tmbundle.zip",
+                "BundlePathLocal": "${UserProfile}\\.vs\\Extensions\\TextMateLanguageGrammers\\Kotlin.tmbundle.zip"
+            }
+        },
+	{
+            "Name": "Swift",
+            "LanguageService": {
+                "BundlePathUrl": "https://github.com/TallySolutions/TWVSExtension/raw/Work/TextMate/TextMateLanguageGrammers/Swift.tmbundle.zip",
+                "BundlePathLocal": "${UserProfile}\\.vs\\Extensions\\TextMateLanguageGrammers\\Swift.tmbundle.zip"
+            }
         }
     ],
     "RequiredSoftwares" :
