@@ -22,7 +22,7 @@
         {
             "Name": "TWAppIdCompiler",
             "LanguageService": {
-                "BundlePathUrl": "https://github.com/TallySolutions/TWVSExtension/raw/Work/TWAppIdCompiler/TextMateLanguageGrammers/TWAppIdCompiler.tmbundle.zip",
+                "BundlePathUrl": "https://github.com/TallySolutions/TWVSExtension/raw/Work/TextMate/TextMateLanguageGrammers/TWAppIdCompiler.tmbundle.zip",
                 "BundlePathLocal": "${UserProfile}\\.vs\\Extensions\\TextMateLanguageGrammers\\TWAppIdCompiler.tmbundle.zip"
             }
         }
