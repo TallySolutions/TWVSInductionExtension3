@@ -787,7 +787,7 @@
         {
             "Name": "AndroidSDK_BuildTools",
             "Windows": {
-                "VersionString": "32.0.0",
+                "VersionString": "34.0.0",
                 "VersionInfo": {
                     "Command": "type ${InstallDir}\\source.properties",
                     "OutputType": "PlainText",
@@ -810,7 +810,7 @@
                     "InstallDir": "${TWHome}\\Tools\\Android\\SDK\\build-tools\\${VERSION}",
                     "Installcommands": [
                         "rmdir /S /Q ${TWHome}\\Tools\\Android\\SDK\\build-tools\\",
-                        "start \"Android SDK Installer\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat \"platforms;android-32\" \"build-tools;32.0.0\" \"system-images;android-32;google_apis;x86_64\"",
+                        "start \"Android SDK Installer\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat \"platforms;android-34\" \"build-tools;34.0.0\" \"system-images;android-34;google_apis;x86_64\"",
                         "start \"Android SDK Updates\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --update",
                         "start \"Android SDK Licenses - Please accept all\" cmd /c ${TWHome}\\Tools\\Android\\SDK\\cmdline-tools\\latest\\bin\\sdkmanager.bat --licenses"
                     ]
@@ -821,7 +821,7 @@
             "Name"        : "AndroidNDK",
             "Windows"     :
             {
-                "VersionString"  : "23.0",
+                "VersionString"  : "25.0",
                 "VersionInfo"    : 
                 {
                     "Command"    : "type ${InstallDir}\\source.properties",
