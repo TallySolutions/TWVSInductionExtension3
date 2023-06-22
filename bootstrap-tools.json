@@ -1524,6 +1524,41 @@
                     ]
                 }
             }
+        },
+        {
+            "Name"        : "WindowsAppRuntime",
+            "Windows"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Windows-${HOST-ARCH}-BuildTools",
+                        "Package"      : "windows_app_runtime"
+                },
+                "VersionInfo"    : 
+                {
+                    "Command"    : "type ${InstallDir}\\windows_app_runtime.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+		},
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallWindowsAppRuntime",
+                    "InstallDir"      : "${TWHome}\\Tools\\WindowsAppRuntime",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD",
+			"start /wait ${InstallDir}/WindowsAppRuntimeInstall.exe"
+                    ],
+                    "UninstallCommands":
+                    [
+                        "rmdir /S /Q ${InstallDir}"
+                    ]
+                }
+            }
         }
     ],
     "ValidationCMakeFile"  :  "${BootstrapURL}/CMake/ValidateEnvironment.cmake",
