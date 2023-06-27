@@ -3,6 +3,7 @@
     "BuildConfigFile"       : "TWBuildTargets.json",
     "BuildScript"           : "CMake/Build/TWBuild.cmake",
     "CleanScript"           : "CMake/Build/TWClean.cmake",
+    "CachGenAndBuildScript" : "CMake/Build/TWGenCacheAndBuild.cmake",
     "RSyncConfFile"         : "Configs/rsync.conf",
     "RSyncOptions"          : "-t --delete --delete-excluded -r --exclude=.vs --exclude=.git --exclude=out --exclude=.favourites --exclude=_clang-format -8 -vW",
     "AdditionalTargets"     :
