@@ -2,45 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>VSIX Gallery</title>
   <id>5a7c2525-ddd8-4c44-b2e3-f57ba01a0d81</id>
-  <updated>2023-07-19T07:36:20Z</updated>
+  <updated>2023-07-19T12:37:26Z</updated>
   <subtitle>Add this feed to Visual Studio's extension manager from Tools -&gt; Options -&gt; Environment -&gt; Extensions and Updates</subtitle>
   <link rel="alternate" href="feed.xml" />
   <entry>
-    <id>TWVSBuild.39a74f28-e760-4051-9b62-a6286a68b27a</id>
-    <title type="text">TWVSBuild</title>
-    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSBuild-v9.3.2.11" />
-    <summary type="text">TallyWorld Visual Studio Build Support</summary>
-    <published>2023-07-19T07:36:02Z</published>
-    <updated>2023-07-19T07:36:02Z</updated>
-    <author>
-      <name>Tally</name>
-    </author>
-    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSBuild-v9.3.2.11/Tally.TWVSBuild.vsix" />
-    <link rel="icon" href="icons\TWVSBuild.39a74f28-e760-4051-9b62-a6286a68b27a" />
-    <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010">
-      <Id>TWVSBuild.39a74f28-e760-4051-9b62-a6286a68b27a</Id>
-      <Version>9.3.2.11</Version>
-      <References />
-      <Rating xsi:nil="true" />
-      <RatingCount xsi:nil="true" />
-      <DownloadCount xsi:nil="true" />
-    </Vsix>
-  </entry>
-  <entry>
     <id>TWVSSCM.49b6914f-7dcc-4145-b190-83906aa20b32</id>
     <title type="text">TWVSSCM</title>
-    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSSCM-v22.4.1" />
+    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSSCM-v22.4.1.1" />
     <summary type="text">TallyWorld Source Control Management</summary>
-    <published>2023-06-21T10:41:13Z</published>
-    <updated>2023-06-21T10:41:13Z</updated>
+    <published>2023-07-19T12:37:06Z</published>
+    <updated>2023-07-19T12:37:06Z</updated>
     <author>
       <name>Tally</name>
     </author>
-    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSSCM-v22.4.1/Tally.TWVSSCM.vsix" />
+    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSSCM-v22.4.1.1/Tally.TWVSSCM.vsix" />
     <link rel="icon" href="icons\TWVSSCM.49b6914f-7dcc-4145-b190-83906aa20b32" />
     <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010">
       <Id>TWVSSCM.49b6914f-7dcc-4145-b190-83906aa20b32</Id>
-      <Version>22.4.1</Version>
+      <Version>22.4.1.1</Version>
       <References />
       <Rating xsi:nil="true" />
       <RatingCount xsi:nil="true" />
@@ -50,18 +29,18 @@
   <entry>
     <id>TWVSEditor.e45c0d07-34b0-4405-b94f-ede84e4b95b5</id>
     <title type="text">TWVSEditor</title>
-    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSEditor-v7.0.5" />
+    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSEditor-v7.0.5.1" />
     <summary type="text">TallyWorld Visual Studio Editor Support</summary>
-    <published>2023-06-21T10:40:26Z</published>
-    <updated>2023-06-21T10:40:26Z</updated>
+    <published>2023-07-19T12:36:13Z</published>
+    <updated>2023-07-19T12:36:13Z</updated>
     <author>
       <name>Tally</name>
     </author>
-    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSEditor-v7.0.5/Tally.TWVSEditor.vsix" />
+    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSEditor-v7.0.5.1/Tally.TWVSEditor.vsix" />
     <link rel="icon" href="icons\TWVSEditor.e45c0d07-34b0-4405-b94f-ede84e4b95b5" />
     <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010">
       <Id>TWVSEditor.e45c0d07-34b0-4405-b94f-ede84e4b95b5</Id>
-      <Version>7.0.5</Version>
+      <Version>7.0.5.1</Version>
       <References />
       <Rating xsi:nil="true" />
       <RatingCount xsi:nil="true" />
@@ -71,18 +50,39 @@
   <entry>
     <id>TWVSBuildTools.49b6914f-7ddc-4145-b190-83906aa20b32</id>
     <title type="text">TWVSBuildTools</title>
-    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSBuildTools-v8.1.0" />
+    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSBuildTools-v8.1.0.1" />
     <summary type="text">TallyWorld Build Tools Control Management</summary>
-    <published>2023-06-21T10:39:46Z</published>
-    <updated>2023-06-21T10:39:46Z</updated>
+    <published>2023-07-19T12:35:41Z</published>
+    <updated>2023-07-19T12:35:41Z</updated>
     <author>
       <name>Tally</name>
     </author>
-    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSBuildTools-v8.1.0/Tally.TWVSBuildTools.vsix" />
+    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSBuildTools-v8.1.0.1/Tally.TWVSBuildTools.vsix" />
     <link rel="icon" href="icons\TWVSBuildTools.49b6914f-7ddc-4145-b190-83906aa20b32" />
     <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010">
       <Id>TWVSBuildTools.49b6914f-7ddc-4145-b190-83906aa20b32</Id>
-      <Version>8.1.0</Version>
+      <Version>8.1.0.1</Version>
+      <References />
+      <Rating xsi:nil="true" />
+      <RatingCount xsi:nil="true" />
+      <DownloadCount xsi:nil="true" />
+    </Vsix>
+  </entry>
+  <entry>
+    <id>TWVSBuild.39a74f28-e760-4051-9b62-a6286a68b27a</id>
+    <title type="text">TWVSBuild</title>
+    <link rel="alternate" href="https://github.com/TallySolutions/TWVSExtension/releases/tag/TWVSBuild-v9.3.2.13" />
+    <summary type="text">TallyWorld Visual Studio Build Support</summary>
+    <published>2023-07-19T12:34:52Z</published>
+    <updated>2023-07-19T12:34:52Z</updated>
+    <author>
+      <name>Tally</name>
+    </author>
+    <content type="application/octet-stream" src="https://github.com/TallySolutions/TWVSExtension/releases/download/TWVSBuild-v9.3.2.13/Tally.TWVSBuild.vsix" />
+    <link rel="icon" href="icons\TWVSBuild.39a74f28-e760-4051-9b62-a6286a68b27a" />
+    <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010">
+      <Id>TWVSBuild.39a74f28-e760-4051-9b62-a6286a68b27a</Id>
+      <Version>9.3.2.13</Version>
       <References />
       <Rating xsi:nil="true" />
       <RatingCount xsi:nil="true" />
