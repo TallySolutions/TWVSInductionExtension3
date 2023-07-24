@@ -1,5 +1,5 @@
 {
-    "Version"               : "1.7",
+    "Version"               : "1.6",
     "BuildConfigFile"       : "TWBuildTargets.json",
     "BuildScript"           : "CMake/Build/TWBuild.cmake",
     "CleanScript"           : "CMake/Build/TWClean.cmake",
