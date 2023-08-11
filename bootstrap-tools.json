@@ -909,10 +909,11 @@
                 "Installer" : 
                 { 
                     "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidx",
-                    "InstallDir"      : "${TWHome}\\Tools\\",
+                    "InstallDir"      : "${TWHome}\\Tools\\Androidx",
                     "InstallCommands" :
                     [
                         "ADO_DOWNLOAD",
+			"move ${InstallDir}\\Androidx.zip ${TWHome}\\Tools",
 			"UNZIP ${InstallDir}\\Androidx.zip",
                         "DEL /F ${InstallDir}\\Androidx.zip",
                     ],
