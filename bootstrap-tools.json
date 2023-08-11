@@ -914,8 +914,8 @@
                     [
                         "ADO_DOWNLOAD",
 			"move ${InstallDir}\\Androidx.zip ${TWHome}\\Tools",
-			"UNZIP ${InstallDir}\\Androidx.zip",
-                        "DEL /F ${InstallDir}\\Androidx.zip",
+			"UNZIP ${TWHome}\\Tools\\Androidx.zip",
+                        "DEL /F ${TWHome}\\Tools\\Androidx.zip",
                     ],
                     "UninstallCommands":
                     [
