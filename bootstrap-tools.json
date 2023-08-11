@@ -887,6 +887,41 @@
                 }
             }
         },
+        {
+            "Name"        : "Androidx",
+            "Windows"     :
+            {
+                "VersionType" : "ArtifactoryLatest",
+                "Artifactory" : 
+                {
+                        "Name"         : "ADOService",
+                        "Organization" : "TallyWorld",
+                        "Feed"         : "Windows-${HOST-ARCH}-BuildTools",
+                        "Package"      : "androidx"
+                },
+                "VersionInfo"    : 
+	        {
+                    "Command"    : "type ${InstallDir}\\androidx.properties",
+                    "OutputType" : "PlainText",
+                    "Line"       : 1,
+                    "Column"     : 3                
+	        },
+                "Installer" : 
+                { 
+                    "InstallDoc"      : "https://tallywiki.tallysolutions.com/display/TWP/Install+Required+Software+on+Windows+x64+Host#InstallRequiredSoftwareonWindowsx64Host-InstallAndroidx",
+                    "InstallDir"      : "${TWHome}\\Tools\\",
+                    "InstallCommands" :
+                    [
+                        "ADO_DOWNLOAD",
+			"UNZIP ${InstallDir}\\Androidx.zip",
+                        "DEL /F ${InstallDir}\\Androidx.zip",
+                    ],
+                    "UninstallCommands":
+                    [
+                        "rmdir /S /Q ${InstallDir}"
+                    ]
+                }
+        },
 	{
 	    "Name"        : "Kotlin",
             "Windows"     :
