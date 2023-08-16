@@ -48,7 +48,7 @@
             "Name"        : "CMake",
             "Windows"     :
             {
-                "VersionString"  : "3.24",
+                "VersionString"  : "3.26.4",
                 "Command"        : "${VSCMakeProduct}",
                 "VersionInfo"    : 
                 {
