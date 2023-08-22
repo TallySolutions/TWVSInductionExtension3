@@ -48,7 +48,7 @@
             "Name"        : "CMake",
             "Windows"     :
             {
-                "VersionString"  : "3.26.4",
+                "VersionString"  : "3.27.3",
                 "Command"        : "${VSCMakeProduct}",
                 "VersionInfo"    : 
                 {
@@ -65,7 +65,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "3.26.4",
+                "VersionString"  : "3.27.3",
                 "Command"        : "/usr/bin/cmake",
                 "VersionInfo"    : 
                 {
