@@ -65,7 +65,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "3.26.4",
+                "VersionString"  : "3.27.3",
                 "Command"        : "/usr/bin/cmake",
                 "VersionInfo"    : 
                 {
@@ -101,7 +101,7 @@
             },
             "MacOS"     :
             {
-                "VersionString"  : "3.26.1",
+                "VersionString"  : "3.27.3",
                 "Command"        : "/usr/local/bin/cmake",
                 "VersionInfo"    : 
                 {
