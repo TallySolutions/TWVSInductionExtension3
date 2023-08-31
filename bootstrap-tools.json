@@ -881,7 +881,8 @@
                     ],
                     "UninstallCommands":
                     [
-                        "rmdir /S /Q ${InstallDir}"
+                        "rmdir /S /Q ${InstallDir}\\Androidx",
+		        "DEL /f ${InstallDir}\\androidx.properties"
                     ]
                 }
 	    }
