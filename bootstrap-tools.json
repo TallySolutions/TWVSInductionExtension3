@@ -65,7 +65,7 @@
             },
             "Linux"     :
             {
-                "VersionString"  : "3.27.3",
+                "VersionString"  : "3.28.0",
                 "Command"        : "/usr/bin/cmake",
                 "VersionInfo"    : 
                 {
