@@ -18,7 +18,7 @@
                 "Organizations" : 
                 [
                     {
-                        "Name"          : "TallyWorld",
+                        "Name"          : "TWInduction",
                         "ProjectFilter" : [],
                         "Mandatory"     : true,
                         "Comments"      : "Blank project filter means, ALL projects under the Organization."
